@@ -1,5 +1,5 @@
 import React, { useState } from "react";
- 
+ import './index.css'
 function Todo() {
   const [inputValue, setInputValue] = useState("")
   const [todos, setTodos] = useState([])
