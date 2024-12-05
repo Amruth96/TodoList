@@ -34,6 +34,12 @@ function Todo() {
       setTodos(updatedTodos)
     }
   }
+  const handleComplete = (id) => {
+    const updatedTodos = todos.map((todo) =>
+      todo.id === id ? { ...todo, completed: !todo.completed } : todo
+    )
+    setTodos(updatedTodos)
+  }
   return (
     <div className="todoapp">
       <div className="type">
@@ -47,7 +53,7 @@ function Todo() {
               <span key={todo.id}  style={{ textDecoration: todo.completed ? "line-through" : " completed" }}>{todo.text}</span>
       <button className="editbtn" onClick={() => handleEditClick(index)}>Edit</button>
       <button className="deletebtn" onClick={() => handleDeleteClick(index)}>Delete</button>
-  
+      <button className="completebtn" onClick={() => handleComplete(todo.id)}>Completed</button>
             </div>
           </li>
         ))}
