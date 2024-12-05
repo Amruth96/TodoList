@@ -21,13 +21,37 @@ function Todo() {
     }
   }
  
+  const handleDeleteClick = (index) => {
+    const newTodos = todos.filter((_, i) => i !== index)
+    setTodos(newTodos);
+  }
+ 
+  const handleEditClick = (index) => {
+    const updatedTodos = [...todos]
+    const newText = prompt("Edit the todo", updatedTodos[index].text)
+    if (newText !== null) {
+      updatedTodos[index].text = newText.trim()
+      setTodos(updatedTodos)
+    }
+  }
   return (
     <div className="todoapp">
       <div className="type">
         <input  className="input" type="text" placeholder="Type any text"  onChange={handleInputChange}/>
         <button className="btn" onClick={handleAddTodo}>Add </button>
       </div>
-      
+      <ul className="addlist">
+        {todos.map((todo, index) => (
+          <li >
+            <div className="list">
+              <span key={todo.id}  style={{ textDecoration: todo.completed ? "line-through" : " completed" }}>{todo.text}</span>
+      <button className="editbtn" onClick={() => handleEditClick(index)}>Edit</button>
+      <button className="deletebtn" onClick={() => handleDeleteClick(index)}>Delete</button>
+  
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
