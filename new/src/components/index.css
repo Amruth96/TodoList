@@ -1,0 +1,80 @@
+.todoapp {
+    width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  .type {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .btn {
+    padding: 8px 12px;
+    background:linear-gradient(to right, #f066bd, #bd4516);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .btn:hover {
+    background: #9d9e8f;
+  }
+  .addlist {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px;
+        background-color: #e0e0e0;
+        border-radius: 4px;
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: #333;
+      }
+  .list:hover{
+    background-color: #9d9e8f;
+  }    
+  .editbtn {
+    background-color: #2d0e75;
+    margin-left: 100px;
+    color: white;
+  }
+  .editbtn:hover{
+    background-color: #9d9e8f;
+  }
+ 
+  .deletebtn {
+    background-color: #a75c16;
+    margin-left: 5px;
+    color: white;
+  }
+  .deletebtn:hover{
+    background-color: #f1223d;
+  }
+ 
+  .completebtn {
+    background-color: #7c1885;
+    margin-left: 5px;
+    color: white;
+  }
+  .completebtn:hover{
+    background-color: #9d9e8f;
+  }
+ 
